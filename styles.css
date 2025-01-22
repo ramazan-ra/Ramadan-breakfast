@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
   --primary: #d4af37; /* Royal Gold */
   --secondary: #c5a028; /* Darker Gold */
@@ -9,7 +16,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Noto Sans Arabic", sans-serif;
 }
 
@@ -51,9 +59,11 @@ h1 {
 
 .card {
   background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
   border-radius: 0.75rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   max-width: 28rem;
   margin: 0 auto;
   border: 1px solid rgba(212, 175, 55, 0.3);
@@ -64,8 +74,13 @@ h1 {
 }
 
 .bank-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 1rem;
   margin-top: 20px;
 }
@@ -74,20 +89,33 @@ h1 {
   background: rgba(243, 244, 246, 1);
   padding: 1rem;
   border-radius: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 1px solid rgba(212, 175, 55, 0.2);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .info-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.15);
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 0 4px 12px rgba(212, 175, 55, 0.15);
+          box-shadow: 0 4px 12px rgba(212, 175, 55, 0.15);
 }
 
 .info-content {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .label {
@@ -108,6 +136,8 @@ h1 {
   cursor: pointer;
   color: var(--primary);
   border-radius: 0.375rem;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
   transition: all 0.2s;
   height: 35px;
 }
@@ -155,20 +185,34 @@ h1 {
   right: 1rem;
   background: white;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 1rem;
-  transform: translateY(150%);
+  -webkit-transform: translateY(150%);
+      -ms-transform: translateY(150%);
+          transform: translateY(150%);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   border: 1px solid var(--primary);
 }
 
 .toast.show {
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .toast-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 0.25rem;
 }
 
@@ -202,7 +246,7 @@ h1 {
     padding: 0rem;
   }
   .decorative-elements {
-    height: 120vh;
+    height: 140vh;
   }
 }
 
@@ -213,6 +257,8 @@ h1 {
   top: 0;
   width: 100%;
   height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(0 0 0 / 16%)), to(rgba(31, 31, 31, 0)));
+  background: -o-linear-gradient(top, rgb(0 0 0 / 16%) 0%, rgba(31, 31, 31, 0) 100%);
   background: linear-gradient(180deg, rgb(0 0 0 / 16%) 0%, rgba(31, 31, 31, 0) 100%);
   z-index: 0;
 }
