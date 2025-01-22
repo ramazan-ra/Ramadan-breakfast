@@ -167,6 +167,7 @@ h1 {
   pointer-events: none;
   background-image: url(./ramadan2.webp);
   background-size: cover;
+      object-fit: contain;
 }
 
 .ramadan-svg {
