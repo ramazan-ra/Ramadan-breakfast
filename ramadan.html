@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منصة التبرعات الرمضانية</title>
+    <meta name="description" content="منصة التبرعات الرمضانية - ساهم في الخير" />
+    <meta name="author" content="Lovable" />
+    <meta property="og:image" content="/og-image.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./ramadan-kareem.png">
+  </head>
+  <body>
+    <div class="min-h-screen font-arabic relative overflow-hidden">
+      <!-- Ramadan SVG Background -->
+      <div class="ramadan-svg">
+        <svg width="100%" height="100%" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+          <!-- Crescent Moon -->
+          <path d="M400,300 A150,150 0 1,1 400,600 A100,100 0 1,0 400,300" fill="rgba(212, 175, 55, 0.1)"/>
+          <!-- Stars -->
+          <g fill="rgba(212, 175, 55, 0.15)">
+            <path d="M600,200 L610,220 L630,220 L615,235 L620,255 L600,245 L580,255 L585,235 L570,220 L590,220 Z"/>
+            <path d="M750,400 L760,420 L780,420 L765,435 L770,455 L750,445 L730,455 L735,435 L720,420 L740,420 Z"/>
+            <path d="M200,500 L210,520 L230,520 L215,535 L220,555 L200,545 L180,555 L185,535 L170,520 L190,520 Z"/>
+          </g>
+          <!-- Lantern -->
+          <g transform="translate(100,300)" fill="rgba(212, 175, 55, 0.12)">
+            <path d="M40,0 L60,0 L80,30 L20,30 Z"/>
+            <path d="M30,30 L70,30 L60,100 L40,100 Z"/>
+            <path d="M40,100 L60,100 L65,110 L35,110 Z"/>
+          </g>
+          <!-- Mosque Silhouette -->
+          <g transform="translate(700,200)" fill="rgba(212, 175, 55, 0.08)">
+            <path d="M0,200 L200,200 L200,100 L160,100 L160,80 C160,50 140,30 100,30 C60,30 40,50 40,80 L40,100 L0,100 Z"/>
+            <circle cx="100" cy="30" r="20"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Decorative Elements -->
+      <div class="decorative-elements">
+      </div>
+
+      <div class="container">
+        <div class="content">
+          <h1>ساهم في الخير في شهر رمضان المبارك</h1>
+          
+          <p class="subtitle">كل تبرع يصنع فرقاً في حياة المحتاجين. ساهم معنا في نشر الخير والبركة</p>
+
+          <div class="donation-form">
+            <div class="card">
+              <div class="card-content">
+                <div class="text-center mb-6">
+                  <h3>معلومات الحساب البنكي</h3>
+                  <p>يمكنكم التحويل مباشرة إلى الحساب التالي</p>
+                </div>
+
+                <div class="bank-info">
+                    <div class="info-item">
+                      <div class="info-content">
+                        <p class="label">تعريف المشروع</p>
+                        <p class="value">فريق متطوع لتفطير الصائمين</p>
+                      </div>
+                      <button onclick="copyText('فريق متطوع لتفطير الصائمين')" class="copy-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                      </button>
+                    </div>
+                  <div class="info-item">
+                    <div class="info-content">
+                      <p class="label">اسم البنك</p>
+                      <p class="value">Kuveyt Türk</p>
+                    </div>
+                    <button onclick="copyText('Kuveyt Türk')" class="copy-btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                    </button>
+                  </div>
+
+
+                  <div class="info-item">
+                    <div class="info-content">
+                      <p class="label">رقم الحساب (IBAN)</p>
+                      <p class="value font-mono">SA0380000000608010167519</p>
+                    </div>
+                    <button onclick="copyText('SA0380000000608010167519')" class="copy-btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="footer-text">
+                  <p>بعد إتمام التحويل، سيتم تأكيد استلام تبرعكم</p>
+                  <p>جزاكم الله خيراً ✨</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <p class="security-note">جميع المعاملات آمنة ومشفرة 🔒</p> -->
+        </div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast">
+      <div class="toast-content">
+        <span class="toast-title">تم النسخ</span>
+        <span class="toast-description">تم نسخ المعلومات إلى الحافظة</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
