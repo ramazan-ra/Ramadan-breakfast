@@ -36,12 +36,16 @@ h1 {
   margin-bottom: 1.5rem;
   line-height: 1.2;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 100;
 }
 
 .subtitle {
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgb(255, 255, 255);
   margin-bottom: 3rem;
+  position: relative;
+  z-index: 100;
 }
 
 .card {
@@ -104,7 +108,7 @@ h1 {
   color: var(--primary);
   border-radius: 0.375rem;
   transition: all 0.2s;
-  height: 35px; 
+  height: 35px;
 }
 
 .copy-btn:hover {
@@ -180,16 +184,34 @@ h1 {
 @media (max-width: 640px) {
   h1 {
     font-size: 2rem;
+    padding: 15px;
+    margin-top: 20px;
   }
 
   .subtitle {
     font-size: 1.125rem;
+    padding: 15px;
+    margin-top: -40px;
   }
 
   .card {
     margin: 0 1rem;
   }
-  .container{
+  .container {
     padding: 0rem;
   }
+  .decorative-elements {
+    height: 120vh;
+  }
+}
+
+.decorative-elements::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgb(0 0 0 / 16%) 0%, rgba(31, 31, 31, 0) 100%);
+  z-index: 0;
 }
