@@ -874,3 +874,12 @@ footer p {
     margin-top: 15px;
     transform: translate(-40%, 0%);
 }
+.ffarikimage{
+  width: 100px;
+}
+@media (min-width:767px) {
+  .ffarikimage{
+    position: relative;
+    left: 3%;
+  }
+}
