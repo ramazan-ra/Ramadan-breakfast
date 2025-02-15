@@ -112,6 +112,7 @@ h1 {
   border: 1px solid rgb(212 112 55 / 30%);
   z-index: 100;
   position: relative;
+  padding-bottom: 25px;
 }
 
 .card-content {
@@ -215,6 +216,7 @@ h1 {
   background-image: url(ramadan3_11zon.webp);
   background-size: cover;
   object-fit: contain;
+  height: 110vh;
 }
 
 .ramadan-svg {
@@ -299,7 +301,7 @@ h1 {
     padding: 0rem;
   } */
   .decorative-elements {
-    height: 950px;
+    height: 115vh;
   }
   .ikinci-div {
     margin-top: 120px !important;
@@ -881,5 +883,52 @@ footer p {
   .ffarikimage{
     position: relative;
     left: 3%;
+  }
+}
+
+/* From Uiverse.io by JaydipPrajapati1910 */ 
+.currency-switch button {
+  color: white;
+  background-color: #b34a0b;
+  font-weight: 500;
+  border-radius: 0.7rem;
+  font-size: 12px;
+  line-height: 2rem;
+  padding: 2px 15px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  margin-top: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.currency-switch button:hover {
+  background-color: #d46337;
+}
+.currency-switch button:active{
+  background-color: #b34a0b;
+  scale: 0.9;
+}
+.currency-switch button svg {
+  display: inline;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-right: 0.75rem;
+  color: white;
+}
+
+.currency-switch button:active svg {
+  animation: spin_357 0.5s linear;
+}
+
+@keyframes spin_357 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }
