@@ -66,7 +66,19 @@
                                 <h3>معلومات الحساب البنكي</h3>
                                 <p>يمكنكم التحويل مباشرة إلى الحساب التالي</p>
                             </div>
-
+                            <div class="currency-switch">
+                                <button onclick="toggleCurrency()">
+                                    التغيير إلى الدولار <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z">
+                                        </path>
+                                        <path fill-rule="evenodd"
+                                            d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
                             <div class="bank-info">
                                 <div class="info-item">
                                     <div class="info-content">
@@ -87,9 +99,10 @@
                                 <div class="info-item">
                                     <div class="info-content">
                                         <p class="label">اسم المستلم</p>
-                                        <p class="value">Omar Shwehneh</p>
+                                        <p class="value" id="recipient-name">Omar Shwehneh</p>
                                     </div>
-                                    <button onclick="copyText('Omar Shwehneh')" class="copy-btn">
+                                    <button onclick="copyText(document.getElementById('recipient-name').innerText)"
+                                        class="copy-btn">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round">
@@ -101,9 +114,10 @@
                                 <div class="info-item">
                                     <div class="info-content">
                                         <p class="label">رقم الحساب (IBAN)</p>
-                                        <p class="value font-mono">TR64 0001 0090 1043 7862 1050 01</p>
+                                        <p class="value font-mono" id="iban">TR37 0001 0090 1043 7862 1050 02</p>
                                     </div>
-                                    <button onclick="copyText('TR64 0001 0090 1043 7862 1050 01')" class="copy-btn">
+                                    <button onclick="copyText(document.getElementById('iban').innerText)"
+                                        class="copy-btn">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round">
@@ -176,15 +190,15 @@
     <div class="ucuncu-div container">
         <div class="video-mask">
             <div class="box one">
-                <video class="video" id="video">
-                    <source src="videos/video1 (3).mp4" type="video/mp4">
+                <video class="video" id="video" poster="image/Screenshot 2025-02-15 115615.jpg">
+                    <source src="videos/video1 (3).mp4"  type="video/mp4">
                     المتصفح الخاص بك لا يدعم عرض الفيديو.
                 </video>
                 <button class="play-button" id="playButton">▶</button>
             </div>
             <div class="box two">
-                <video class="video" id="video1">
-                    <source src="videos/video_2025.mp4" type="video/mp4">
+                <video class="video" id="video1" poster="image/Screenshot 2025-02-15 115956.jpg">
+                    <source src="videos/video_2025.mp4"  type="video/mp4">
                     المتصفح الخاص بك لا يدعم عرض الفيديو.
                 </video>
                 <button class="play-button" id="playButton1">▶</button>
@@ -196,12 +210,13 @@
         <div class="main-title">
             <h1>حملة رمضان 2025: نورك فرحة لغيرك ✨🌙</h1>
         </div>
-        
+
         <!-- الآية الكريمة والحديث الشريف -->
         <div class="quotes-section">
             <div class="quote-card">
                 <p class="quote-text">قال الله تعالى:</p>
-                <p class="verse">"وَيُطْعِمُونَ الطَّعَامَ عَلَىٰ حُبِّهِ مِسْكِينًا وَيَتِيمًا وَأَسِيرًا ۝ إِنَّمَا نُطْعِمُكُمْ لِوَجْهِ اللَّهِ لَا نُرِيدُ مِنكُمْ جَزَاءً وَلَا شُكُورًا"</p>
+                <p class="verse">"وَيُطْعِمُونَ الطَّعَامَ عَلَىٰ حُبِّهِ مِسْكِينًا وَيَتِيمًا وَأَسِيرًا ۝ إِنَّمَا
+                    نُطْعِمُكُمْ لِوَجْهِ اللَّهِ لَا نُرِيدُ مِنكُمْ جَزَاءً وَلَا شُكُورًا"</p>
                 <p class="reference">(الإنسان: 8-9)</p>
             </div>
             <div class="quote-card">
@@ -210,38 +225,41 @@
                 <p class="reference">(رواه الترمذي)</p>
             </div>
         </div>
-    
+
         <!-- تفاصيل الحملة -->
         <div class="campaign-section">
             <div class="campaign-card">
                 <h2>إفطار صائم في الشوارع 🍴</h2>
-                <p>توزيع وجبات إفطار خفيفة (ماء + تمر + عصير + بسكويت) للصائمين. السنة الماضية، بفضل الله ودعم المحسنين، أفطرنا 7000 شخص. هذا العام، نهدف إلى إفطار 5000 شخص، مع إمكانية زيادة العدد حسب توفر الدعم.</p>
+                <p>توزيع وجبات إفطار خفيفة (ماء + تمر + عصير + بسكويت) للصائمين. السنة الماضية، بفضل الله ودعم المحسنين،
+                    أفطرنا 7000 شخص. هذا العام، نهدف إلى إفطار 5000 شخص، مع إمكانية زيادة العدد حسب توفر الدعم.</p>
             </div>
-    
+
             <div class="campaign-card">
                 <h2>سلات غذائية 🛒</h2>
-                <p>توزيع سلات غذائية لـ 30 عائلة محتاجة، تحتوي على المواد الأساسية مثل الأرز، البرغل، السكر، الزيت، الزعتر، الفراخ النية، والبطاطا.</p>
+                <p>توزيع سلات غذائية لـ 30 عائلة محتاجة، تحتوي على المواد الأساسية مثل الأرز، البرغل، السكر، الزيت،
+                    الزعتر، الفراخ النية، والبطاطا.</p>
             </div>
-    
+
             <div class="campaign-card">
                 <h2>العشر الآواخر من رمضان 🍲</h2>
                 <p>توزيع وجبات طعام كاملة للعائلات المحتاجة، تشمل كل ما يلزم لوجبة صحية ومغذية.</p>
             </div>
-    
+
             <div class="campaign-card">
                 <h2>فعالية للأطفال 🎪</h2>
-                <p>نجمع الأطفال في منطقتهم وننظم لهم يومًا مميزًا يشمل:  
-                    - حلاقة مجانية استعدادًا للعيد.  
-                    - رسم على الوجوه.  
+                <p>نجمع الأطفال في منطقتهم وننظم لهم يومًا مميزًا يشمل:
+                    - حلاقة مجانية استعدادًا للعيد.
+                    - رسم على الوجوه.
                     - ألعاب ومسابقات ترفيهية.</p>
             </div>
-    
+
             <div class="campaign-card">
                 <h2>العيد 🎁🐑</h2>
-                <p>نحاول تأمين ملابس جديدة لأطفال العائلات المحتاجة ليكون العيد فرحة عليهم. نذبح خروف العيد ونوزع اللحوم على العائلات المحتاجة، كما جرت العادة في كل عام.</p>
+                <p>نحاول تأمين ملابس جديدة لأطفال العائلات المحتاجة ليكون العيد فرحة عليهم. نذبح خروف العيد ونوزع اللحوم
+                    على العائلات المحتاجة، كما جرت العادة في كل عام.</p>
             </div>
         </div>
-    
+
         <!-- دعوة للتبرع -->
         <!-- <div class="donation-call">
             <h2>ساهم معنا واجعل رمضانك نورًا للآخرين 💛✨</h2>
@@ -252,8 +270,10 @@
             <div class="logo">فريق السلام</div>
             <img class="ffarikimage" src="./image/SunSmileLogo.png" alt="">
             <div class="social-icons">
-                <a href="https://www.facebook.com/profile.php?id=100094696256212" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/peace13team/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100094696256212" target="_blank" title="Facebook"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/peace13team/" target="_blank" title="Instagram"><i
+                        class="fab fa-instagram"></i></a>
             </div>
         </div>
         <p>ساهم معنا واجعل رمضانك نورًا للآخرين 💛✨</p>
